@@ -3,7 +3,7 @@ Projeto SIN142 - Sistemas distribuídos Desafio 1, Open Nebula
 
 Vídeo demonstrando o funcionamento do sistema: https://drive.google.com/file/d/1ONIPUDwLuDxygn-yDTvDfmkLCIzg2h4k/view
 
-Gleidson Vinícius Gomes Barbosa - 6331
+# Gleidson Vinícius Gomes Barbosa - 6331
 
 OBS.: O PDF do repositório descreve exatamente os mesmos passos porém com imagens para mais detalhes.
 Obs.2.: No vídeo devido a uma falta de atualização da página o Host está apresentando o estado de ERROR, porém como pode ser observado a VM se inicia normalmente e como a mesma é dependente direta do Host, verifica-se o funcionamento do mesmo. 
@@ -19,7 +19,7 @@ Neste momento observaremos apenas a máquina FrontEnd para instalar o módulo pr
 Durante a execução desse procedimento será solicitado ao usuário uma confirmação para continuar, apenas digite yes e continue.
 Observe que ao fim deste procedimento nos é dado um Report com os dados de nossa máquina assim como usuário e senha do OpenNebula. Devemos lembrar de salvá-los, esses dados são essenciais, são eles: User: oneadmin Password: 5UQ4MjEULn
 
-Configurando Open Nebula Node
+# Configurando Open Nebula Node
 
 1. Como no caso da máquina FrontEnd, aqui também utilizarei o ssh e o modo root. Vide passos 1 e 2 do tópico anterior.
 2. Importaremos o repositório do OpenNebula com os seguinte comandos: wget -q -O- https://downloads.opennebula.org/repo/repo.key | sudo apt-key add -
@@ -33,7 +33,9 @@ If not using PolicyKit and setting group ownership for access
 control, then you may want to relax this too.
 unix_sock_rw_perms = "0777" Original Novo
 6. Agora devemos reiniciar o serviço libvirtd com o comando systemctl restart libvirtd
-Configurando SSH
+
+# Configurando SSH
+
 1. O primeiro passo é entrar no usuário oneadmin na máquina FrontEnd e executar o comando ssh-keyscan <frontend> <node> >> /var/lib/one/.ssh/known_hosts onde <frontend> será o nome ou IP da máquina FrontEnd e <node> será o IP ou nome da máquina Node.
 2. Realizaremos alteração da senha na máquina Node com o comando passwd oneadmin
 3. Para habilitar o acesso ssh sem senha ou passwordless ssh utilizaremos o seguinte comando na máquina FrontEnd ssh-copy-id -i /var/lib/one/.ssh/id_rsa.pub <node> onde <node> é o IP ou nome da máquina Node. Logo após esse, também executaremos o comando scp -p /var/lib/one/.ssh/known_hosts <node>:/var/lib/one/.ssh/
@@ -46,9 +48,10 @@ Ao fim do nosso tópico de instalação do OpenNebula FrontEnd já temos dispon�
 3. Aqui entraremos com o IP ou nome da máquina Node e clicaremos em Create.
 4. Por fim, basta clicar em atualizar até seu host ficar em estado ON.
 
-  Subindo uma VM no OpenNebula
+ # Subindo uma VM no OpenNebula
   
 Devido a limitações de espaço em minhas VM’s não foi possível utilizar a imagem padrão do CentOS, então foi necessário upar um minimal Linux e gerar um novo template com a minha imagem.
+  
 1. Para adicionar a nova imagem vamos a Storage>Images e clicaremos no + e em seguida em Create.
 2. Preenchemos o nome e escolhemos upload, depois disso fazemos upload da imagem.
 Após fazer o upload da imagem, clicamos em Create.
