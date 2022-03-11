@@ -18,7 +18,9 @@ Neste momento observaremos apenas a máquina FrontEnd para instalar o módulo pr
 4. Por fim utilizando a ferramenta minione eu realizarei a instalação do OpenNebula com o comando bash minione – frontend –force nesse caso o –force é necessário pois o disco do VMWare foi alocado dinamicamente, ou seja, apesar de seu tamanho máximo ser 50gb, ele não tem 50gb alocado inicialmente assim sendo necessário ignorar a verificação de espaço.
 Durante a execução desse procedimento será solicitado ao usuário uma confirmação para continuar, apenas digite yes e continue.
 Observe que ao fim deste procedimento nos é dado um Report com os dados de nossa máquina assim como usuário e senha do OpenNebula. Devemos lembrar de salvá-los, esses dados são essenciais, são eles: User: oneadmin Password: 5UQ4MjEULn
+
 Configurando Open Nebula Node
+
 1. Como no caso da máquina FrontEnd, aqui também utilizarei o ssh e o modo root. Vide passos 1 e 2 do tópico anterior.
 2. Importaremos o repositório do OpenNebula com os seguinte comandos: wget -q -O- https://downloads.opennebula.org/repo/repo.key | sudo apt-key add -
 3. Após isso adicionaremos o repositório com o seguinte comando: echo "deb https://downloads.opennebula.org/repo/6.2/Ubuntu/20.04 stable opennebula" | sudo tee /etc/apt/sources.list.d/opennebula.list
@@ -43,7 +45,9 @@ Ao fim do nosso tópico de instalação do OpenNebula FrontEnd já temos dispon�
 2. Para adicionar o Host iremoms em Infrastructure>Hosts e clicaremos no sinal de +
 3. Aqui entraremos com o IP ou nome da máquina Node e clicaremos em Create.
 4. Por fim, basta clicar em atualizar até seu host ficar em estado ON.
-Subindo uma VM no OpenNebula
+
+  Subindo uma VM no OpenNebula
+  
 Devido a limitações de espaço em minhas VM’s não foi possível utilizar a imagem padrão do CentOS, então foi necessário upar um minimal Linux e gerar um novo template com a minha imagem.
 1. Para adicionar a nova imagem vamos a Storage>Images e clicaremos no + e em seguida em Create.
 2. Preenchemos o nome e escolhemos upload, depois disso fazemos upload da imagem.
