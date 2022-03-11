@@ -1,6 +1,9 @@
 # OpenNebula
 Projeto SIN142 - Sistemas distribuídos Desafio 1, Open Nebula
 Gleidson Vinícius Gomes Barbosa - 6331
+
+OBS.: O PDF do repositório descreve exatamente os mesmos passos porém com imagens para mais detalhes.
+
 OpenNebula - Como fazer?
 
 A instalação do OpenNebula FrontEnd
