@@ -5,8 +5,10 @@ Vídeo demonstrando o funcionamento do sistema: https://drive.google.com/file/d/
 
 # Gleidson Vinícius Gomes Barbosa - 6331
 
-OBS.: O PDF do repositório descreve exatamente os mesmos passos porém com imagens para mais detalhes.
-Obs.2.: No vídeo devido a uma falta de atualização da página o Host está apresentando o estado de ERROR, porém como pode ser observado a VM se inicia normalmente e como a mesma é dependente direta do Host, verifica-se o funcionamento do mesmo. 
+# OBS.: O PDF do repositório descreve exatamente os mesmos passos porém com imagens para mais detalhes.
+
+
+# OBS.2.: No vídeo devido a uma falta de atualização da página o Host está apresentando o estado de ERROR, porém como pode ser observado a VM se inicia normalmente e como a mesma é dependente direta do Host, verifica-se o funcionamento do mesmo. 
 
 OpenNebula - Como fazer?
 
